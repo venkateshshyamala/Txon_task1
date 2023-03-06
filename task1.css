@@ -1,0 +1,108 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.container{
+    width:100%;
+    height: 100vh;
+    background: linear-gradient(rgba(83, 84, 161, 0.9),transparent),
+        url('images/background.png');
+    background-position: center;
+    background-size: cover;
+    padding: 0 8%;
+    position: relative;
+}
+nav{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px 0;
+}
+.logo{
+    width: 170px;
+    cursor: pointer;
+}
+nav ul{
+    flex: 1;
+    text-align: right;
+    padding-right: 30px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 30px;
+}
+nav ul li a{
+    color: rgb(240, 236, 240);
+    text-decoration:none;
+    position: relative;
+}
+nav ul li a:hover{
+    color: yellow;
+}
+nav ul li a::after{
+    content: '';
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    bottom: -5px;
+    background: yellow;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width .3s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.text{
+    color:white;
+    position: absolute;
+    bottom: 8%;
+}
+.text p{
+    font-size: 50px;
+    font-weight: 600;
+}
+.text h1{
+    font-size: 130px;
+    line-height: 160px;
+    margin-left: -10px;
+    color: transparent;
+    -webkit-text-stroke: 2px rgba(187,0,255,0.956);
+    background: url('images/animation.png');
+    -webkit-background-clip: text;
+    background-position: 0,0;
+    animation: animate 100s linear infinite;
+}
+@keyframes animate{
+    100%{
+        background-position: 20000px 0;
+    }
+}
+.text .btn{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.text a{
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-right: 20px;
+    border: 2px solid #fff;
+    text-align: center;
+    display: flex;
+}
+.text a:hover{
+    color: rgb(6, 22, 250);
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-right: 20px;
+    border: 2px solid #fff;
+    text-align: center;
+    display: flex;
+}
